@@ -1,0 +1,21 @@
+PS D:\Projects\Glide\abhayp-repo> cd practice/makefile_demo
+PS D:\Projects\Glide\abhayp-repo\practice\makefile_demo> mingw32-make
+gcc -c main.c strcomp.h
+gcc -c strcomp.c strcomp.h
+gcc main.o strcomp.o -o compare_strings 
+PS D:\Projects\Glide\abhayp-repo\practice\makefile_demo> ./compare_strings
+Enter string 1: sbf
+Enter string 2: dfn
+Strings are not equal.
+
+cmp1: q101.o q102.o
+     gcc q101.c q102.c -o cmp1
+
+q101.o: q101.c
+     gcc q101.c
+
+q102.o: q102.c
+     gcc q102.c
+
+clear:
+     rm *.
